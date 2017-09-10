@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">VMovies</string>
+    <string name="myCache">我的缓存</string>
+    <string name="myLike">我喜欢的</string>
+    <string name="search">请输入要搜索的内容</string>
+    <string name="tip">使用社交平台登录/注册</string>
+    <string name="bq">VMovies</string>
+</resources>

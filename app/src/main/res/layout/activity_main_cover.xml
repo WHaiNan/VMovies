@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/slide_bg"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/main_close_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="60dp"
+        android:src="@mipmap/side_close" />
+
+    <RelativeLayout
+        android:id="@+id/main_cover_info"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/default_avatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="点击登录"
+            android:textColor="@color/colorGray9" />
+
+        <ImageView
+            android:id="@+id/setting"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="16dp"
+            android:layout_toLeftOf="@id/login"
+            android:src="@mipmap/side_set" />
+
+        <ImageView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="16dp"
+            android:layout_toRightOf="@id/login"
+            android:src="@mipmap/side_message" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/main_cover_like_and_cache"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:layout_below="@id/main_cover_info"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/video_lan_download"
+            android:gravity="center"
+            android:text="@string/myCache"
+            android:textColor="@color/colorGray9" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:drawableTop="@mipmap/video_lan_collect"
+            android:gravity="center"
+            android:text="@string/myLike"
+            android:textColor="@color/colorGray9" />
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/main_cover_controller"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/main_cover_like_and_cache"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/cover_home"
+            style="@style/controller_button_style"
+            android:drawableLeft="@drawable/first_page_selector"
+            android:text="首页" />
+
+        <RadioButton
+            android:id="@+id/cover_series"
+            style="@style/controller_button_style"
+            android:drawableLeft="@drawable/second_page_selector"
+            android:text="系列" />
+
+        <RadioButton
+            android:id="@+id/cover_behind"
+            style="@style/controller_button_style"
+            android:drawableLeft="@drawable/third_page_selector"
+            android:text="幕后" />
+    </RadioGroup>
+
+</RelativeLayout>
